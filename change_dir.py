@@ -1,7 +1,6 @@
 import os
 import re
 import time
-import shutil
 def get_list(old_list,pattern):
     new_list = []
     for i in old_list:
@@ -34,7 +33,6 @@ def change_dir_list(old_list):
             old_list.remove(i)
             os.rename(i,r'H:/电影/The Flash/'+i)
             print(i.ljust(35)+'移至H:/电影/The Flash')
-    #for i in old_list:
         else:
             os.rename(i,r'H:/电影/'+i)
             print(i.ljust(35)+'移至H:/电影')
@@ -49,7 +47,6 @@ def change_dir(list_dir):
     return len(move_list)
 if __name__ == "__main__":
     a = time.time()
-    #os.chdir(r'H:\迅雷下载')
     b = change_dir(r'H:\迅雷下载')
     dir_list = [i for i in os.listdir() if os.path.isdir(i)]
     for i in dir_list:
